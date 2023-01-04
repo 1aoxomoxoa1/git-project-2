@@ -12,5 +12,7 @@ db.authenticate().then(() => {
   console.error('Unable to connect to the database: ', error);
 });
 
+// here will be router
+
 // waiting for requests
 app.listen(PORT);

@@ -2,6 +2,7 @@ const sequelize = require("../db.js");
 const { DataTypes } = require("sequelize");
 const Orders = require("./orders.js");
 
+
 const Users = sequelize.define("users", {
   username: {
     type: DataTypes.STRING(7),

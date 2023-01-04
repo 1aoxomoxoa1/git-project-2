@@ -1,5 +1,6 @@
 use git_project;
 
+
 create table users(
 username varchar(7) not null,
 email varchar(100) unique,

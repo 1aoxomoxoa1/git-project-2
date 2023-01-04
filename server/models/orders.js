@@ -2,6 +2,7 @@ const sequelize = require("../db.js");
 const { DataTypes } = require("sequelize");
 const Users = require("./users.js");
 
+
 const Orders = sequelize.define("orders", {
   order_ID: {
     type: DataTypes.INTEGER,
