@@ -11,6 +11,7 @@ from 'mdb-react-ui-kit';
 import { useRef } from 'react';
 // const {postSignup, checkEmail} = require('./signup.js')
 import {checkEmail, postSignup, checkUsername} from './signup.js'
+import { Button } from 'react-bootstrap';
 
 function Signup(){
 
@@ -59,7 +60,7 @@ function Signup(){
             <MDBInput wrapperClass='mb-4' label='Password' size='lg' id='form3' type='password'/>
             <MDBInput wrapperClass='mb-4' label='Repeat password' size='lg' id='form4' type='password'/>
             <p className='text-center' ref={errorElement} hidden={true}> User not found </p>
-            <MDBBtn type='submit' className='mb-4 w-100 gradient-custom-4' size='lg'>Sign Up</MDBBtn>
+            <Button type='submit' className='mb-4 w-100 gradient-custom-4' size='lg'> Sign Up </Button>
           </MDBCardBody>
         </form>
       </MDBCard>
