@@ -16,13 +16,14 @@ const Orders = sequelize.define("orders", {
   },
   items_num: DataTypes.INTEGER,
   total_price: {
-    type: DataTypes.VIRTUAL,
-    get() {
-      return `${this.itemsNum * 2.78}`;
-    },
-    set(value) {
-      this.setDataValue('total_price', value);
-    }
+    type: DataTypes.INTEGER,
+    allowNull: false
+    // get() {
+    //   return `${this.items_num * 2.78}`;
+    // },
+    // set(/*value*/) {
+    //   throw new Error('Do not try to set the value to this column!');
+    // }
   },
   username: DataTypes.STRING(7)
 }, {
@@ -31,6 +32,8 @@ const Orders = sequelize.define("orders", {
   timestamps: false
 });
 
-Orders.belongsTo(Users);
+// Orders.associate = (models) => {
+//   Orders.belongsTo(Users, {foreignKey: 'username', as: 'username'});
+// }
 
 module.exports = Orders;
