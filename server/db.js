@@ -1,7 +1,8 @@
 const { Sequelize } = require('sequelize');
+const mysql = require("mysql2/promise");
 
-
-const db = new Sequelize({
+const db = new Sequelize(
+  {
   username: "root",
   password: "177013",
   database: "git_project",

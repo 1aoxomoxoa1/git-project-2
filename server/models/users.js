@@ -18,15 +18,13 @@ const Users = sequelize.define("users", {
     allowNull: false,
     unique: true
   },
-  password: DataTypes.STRING(30),
+  password: DataTypes.STRING(30)
 }, {
   tableName: "users",
   freezeTableName: true,
   timestamps: false
 });
 
-Users.hasMany(Orders, {
-  foreignKey: 'username'
-})
+// Users.hasMany(Orders, { foreignKey: 'username', as: 'username' });
 
 module.exports = Users;
